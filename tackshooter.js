@@ -24,6 +24,7 @@ tackshooter.eventMode = 'static';
 app.stage.addChild(tackshooter)
 var unit=null
 tackshooter.on("mousedown", onDragStart)
+tackshooter.on("vmousedown", onDragStart)
 function onDragMove(event)
 {
     if(tackshooter.selected==true){
@@ -32,6 +33,7 @@ function onDragMove(event)
         //unit.parent.toLocal(event.global, null, unit.position);
     }
     $(document).on("mouseup",onDragEnd)
+    $(document).on("vmouseup",onDragEnd)
 }
 
 function onDragStart()
@@ -42,6 +44,7 @@ function onDragStart()
     unit.alpha = 0.5;
     tackshooter.selected=true
     $(document).on('mousemove', onDragMove);
+    $(document).on('vmousemove', onDragMove);
 }
 
 function onDragEnd()
