@@ -27,7 +27,7 @@ tackshooter.on("mousedown", onDragStart)
 function onDragMove(event)
 {
     if(tackshooter.selected==true){
-        unit.x=event.pageX-80
+        unit.x=event.pageX-205
         unit.y=event.pageY
         //unit.parent.toLocal(event.global, null, unit.position);
     }
